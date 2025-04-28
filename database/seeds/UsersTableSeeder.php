@@ -25,7 +25,7 @@ class UsersTableSeeder extends Seeder
             ],
 
             [
-                'email' => 'admin@gmail.com',
+                'email' => 'raviadmin@gmail.com',
                 'name' => "Ravi Valecha",
                 'password' => '$2y$10$T/AO49e7BmIC9aUG/33mAOdy9yDm/SUGUZC5zU.3Gtj4Lvvf.27My', //12345678
                 'education' => 'acccccccccccccccccadc',

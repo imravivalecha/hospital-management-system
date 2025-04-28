@@ -16,11 +16,11 @@ class CreatePrescriptionsTable extends Migration
         Schema::create('prescriptions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('doctor_id');
-            $table->foreign('doctor_id')->references('id')->on('users')->onDelete('cascade');
+            // $table->foreign('doctor_id')->references('id')->on('users')->onDelete('cascade');
             $table->bigInteger('patient_id');
-            $table->foreign('patient_id')->references('id')->on('patients')->onDelete('cascade');
+            // $table->foreign('patient_id')->references('id')->on('patients')->onDelete('cascade');
             $table->bigInteger('appointment_id');
-            $table->foreign('appointment_id')->references('id')->on('patients')->onDelete('cascade');
+            // $table->foreign('appointment_id')->references('id')->on('patients')->onDelete('cascade');
             $table->char('medicine_issued',3)->default("NO");
             $table->json('bp')->nullable();
             $table->json('cholestrol')->nullable();

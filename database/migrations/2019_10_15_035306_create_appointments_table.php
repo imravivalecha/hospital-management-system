@@ -18,12 +18,12 @@ class CreateAppointmentsTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->bigInteger('patient_id');
-            $table->foreign('patient_id')->references('id')->on('patients')->onDelete('cascade');
+            // $table->foreign('patient_id')->references('id')->on('patients')->onDelete('cascade');
             $table->integer('number');
             $table->bigInteger('doctor_id')->nullable();
             $table->char('admit',3)->default("NO");
             $table->char('completed',3)->default("NO");
-            $table->foreign('doctor_id')->references('id')->on('users')->onDelete('cascade');
+            // $table->foreign('doctor_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

@@ -16,9 +16,9 @@ class CreateMedicinePrescriptionTable extends Migration
         Schema::create('medicine_prescription', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('prescription_id');
-            $table->foreign('prescription_id')->references('id')->on('prescriptions')->onDelete('cascade');
+            // $table->foreign('prescription_id')->references('id')->on('prescriptions')->onDelete('cascade');
             $table->bigInteger('medicine_id');
-            $table->foreign('medicine_id')->references('id')->on('medicines')->onDelete('cascade');
+            // $table->foreign('medicine_id')->references('id')->on('medicines')->onDelete('cascade');
             $table->text('note')->nullable();
             $table->string('issued')->default("NO");
             $table->timestamps();
